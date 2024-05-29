@@ -2,7 +2,7 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-	content: ['./dist/*.html', './src/**/*.js', './dist/data.json'],
+	content: ['./*.html', './src/**/*.js', './data.json'],
 	darkMode: 'class',
 	theme: {
 		container: {

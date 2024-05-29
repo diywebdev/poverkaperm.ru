@@ -1,0 +1,56 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+	body{
+		@apply font-light text-gray-800 relative;
+	}
+}
+
+[data-hidden]{
+	@apply hidden lg:block;
+}
+
+.btn{
+	@apply inline-block cursor-pointer text-[14px] sm:text-lg uppercase font-medium py-3 w-full sm:w-auto sm:px-10 bg-white rounded text-gray-logo transition-all hover:opacity-90 hover:shadow-xl;
+	&.btn-accent{
+		@apply bg-accent text-white;
+	}
+	&.btn-black{
+		@apply bg-black/80 text-white;
+	}
+	&.btn-sm{
+		@apply text-[14px] py-1 px-1 text-center capitalize hover:shadow-none hover:opacity-80;
+	}
+}
+
+[data-aos] {
+	will-change: transform;
+}
+
+.swiper-pagination-bullet{
+	@apply w-4 h-4 bg-gray-400 opacity-100 #{!important};
+}
+.swiper-pagination-bullet-active{
+	@apply bg-accent #{!important};
+}
+
+span[class^="fake-checkbox"]{
+	@apply 
+	before:content-[''] 
+	before:absolute 
+	before:left-1/2 
+	before:top-1/2 
+	before:-translate-x-1/2
+	before:-translate-y-1/2
+	before:w-2.5 before:h-2.5
+	before:opacity-0
+	before:transition-opacity
+}
+.fake-checkbox{
+	@apply before:bg-gray-800 border border-gray-800;
+}
+input[type="checkbox"]:checked ~ div>.fake-checkbox{
+	@apply before:opacity-100;
+}

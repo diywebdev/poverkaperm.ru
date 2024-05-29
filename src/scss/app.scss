@@ -1,0 +1,57 @@
+@use 'sass:math';
+@use 'sass:color';
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+@import "blocks/header";
+@import "blocks/banner";
+
+@import "tailwind";
+
+@keyframes light {
+	0% {
+		box-shadow: 0 8px 10px rgba(#28A8E9, 0.3), 0 0 0 0 rgba(#28A8E9, 0.2), 0 0 0 0 rgba(#28A8E9, 0.2);
+	}
+	40% {
+			box-shadow: 0 8px 10px rgba(#28A8E9, 0.3), 0 0 0 15px rgba(#28A8E9, 0.2), 0 0 0 0 rgba(#28A8E9, 0.2);
+	}
+	80% {
+			box-shadow: 0 8px 10px rgba(#28A8E9, 0.3), 0 0 0 30px rgba(#28A8E9, 0), 0 0 0 26.7px rgba(#28A8E9, 0.067);
+	}
+	100% {
+			box-shadow: 0 8px 10px rgba(#28A8E9, 0.3), 0 0 0 30px rgba(#28A8E9, 0), 0 0 0 40px rgba(#28A8E9, 0.0);
+	}
+}
+
+@keyframes opsimple {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(25deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+#telegram-widget{
+	animation: light linear 1s infinite;
+	a{
+		animation: opsimple 4s infinite;
+	}
+}
+
+.accr-slider{
+	.swiper-slide{
+		img{
+			@apply lg:opacity-70 lg:scale-75;
+			transition: all .3s cubic-bezier(.17,.67,.83,.67);
+		}
+		&.swiper-slide-active{
+			img{
+				@apply lg:opacity-100 lg:scale-125;
+			}
+		}
+	}
+}

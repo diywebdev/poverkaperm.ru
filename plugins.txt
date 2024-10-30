@@ -1,0 +1,4 @@
+cyr2lat
+all-in-one-wp-migration
+wordpress-seo
+acf

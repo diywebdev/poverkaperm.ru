@@ -33,6 +33,11 @@ add_action('after_setup_theme', 'theme_setup');
 
 
 /**
+ * Глобальные запросы к БД
+ */
+require get_template_directory() . '/inc/global-request.php';
+
+/**
  * Подключаем стили и скрипты
  */
 require get_template_directory() . '/inc/styles-n-scripts.php';

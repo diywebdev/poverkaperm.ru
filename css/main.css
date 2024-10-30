@@ -1,1 +1,24 @@
 /* Пиши свои стили здесь */
+.b_menu {
+	padding-top: 40px;
+}
+
+.p40t {
+	padding-top: 40px;
+}
+
+.bottom-menu li a {
+	text-transform: uppercase;
+	font-weight: 400;
+}
+
+@media screen and (min-width: 621px) {
+	.b_menu {
+		display: flex;
+		justify-content: space-between;
+	}
+	.bottom-menu li {
+		text-align: right;
+		margin-bottom: 20px;
+	}
+}

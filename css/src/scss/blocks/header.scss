@@ -1,0 +1,48 @@
+.header-menu{
+	box-shadow: -10px 0 20px rgba(0,0,0,.1);
+	@apply fixed lg:relative max-w-sm w-full lg:w-auto lg:max-w-none top-0 bottom-0 bg-white right-0 lg:shadow-none py-16 lg:py-0 overflow-y-auto lg:overflow-y-visible h-screen lg:h-auto z-50 transition-transform lg:transition-none duration-500 lg:duration-[0s] ease-in-out translate-x-full lg:translate-x-0;
+	&.open{
+		@apply translate-x-0;
+	}
+	ul{
+		@apply flex uppercase font-normal flex-col lg:flex-row;
+	}
+	li{
+		@apply w-full lg:w-auto;
+	}
+	a{
+		@apply py-5 xl:py-6 px-4 lg:px-2 xl:px-3 block lg:inline-block transition-colors hover:text-white hover:bg-accent/80;
+		&.active{
+			@apply text-white bg-accent;
+		}
+	}
+}
+
+.dropdown{
+	@apply relative;
+	> a{
+		@apply font-bold lg:font-normal;
+	}
+	ul{
+		@apply bg-gray-100 pl-5 lg:pl-0 lg:absolute lg:top-full lg:left-0 lg:bg-white lg:shadow-xl flex flex-col w-full transition-all duration-300;
+		a{
+			@apply whitespace-nowrap block w-full
+		}
+	}
+}
+
+.close-menu-btn{
+	@apply w-10 h-10 flex lg:hidden items-center justify-center absolute top-0 right-0 text-3xl text-gray-logo/80
+}
+
+.toggle-menu-btn{
+	@apply w-9 h-9 rounded-[2px] bg-accent/80 flex flex-col justify-center items-center gap-1.5 focus:bg-accent lg:hidden;
+	span{
+		@apply w-6 h-[2px] bg-white transition-all duration-300 relative;
+	}
+	&.active{
+		span{
+			@apply first:rotate-45 first:top-1 even:hidden last:-rotate-45 last:-top-1;
+		}
+	}
+}

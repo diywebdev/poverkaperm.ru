@@ -11,7 +11,7 @@
 		@apply w-full lg:w-auto;
 	}
 	a{
-		@apply py-5 xl:py-6 px-4 lg:px-2 xl:px-3 block lg:inline-block transition-colors hover:text-white hover:bg-accent/80;
+		@apply text-sm py-5 xl:py-6 px-4 lg:px-2 xl:px-3 block lg:inline-block transition-colors hover:text-white hover:bg-accent/80;
 		&.active{
 			@apply text-white bg-accent;
 		}

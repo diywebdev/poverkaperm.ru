@@ -5,8 +5,8 @@
 				<div class="logo">
 					<img src="<?= get_template_directory_uri(); ?>/assets/img/logo_cm_white.png" class="max-w-[150px] xl:max-w-[220px]" style="opacity:0.5;" alt="ALT">
 					<p class="pt-10 text-left"><?= get_bloginfo('description'); ?></p>
-					<div class="pt-10" data-aos="fade-up" id="zayavka">
-						<a href="#callback-modal" class="btn btn-accent popup-link" data-aos="zoom-in" data-aos-delay="700" data-form="Онлайн заявка. Кнопка в футере">Оставить заявку</a>
+					<div class="py-10">
+						<a href="#callback-modal" class="btn btn-accent popup-link text-center" data-form="Онлайн заявка. Кнопка в футере">Оставить заявку</a>
 					</div>
 				</div>
 
@@ -31,6 +31,9 @@
 			<a href="#policy-modal" class="underline hover:no-underline inline-block popup-link">Соглашение на обработку персональных данных</a>
 		</div>
 </footer>
+<?php
+	get_template_part('template-parts/sections/modals');
+?>
 <?php wp_footer(); ?>
 </body>
 

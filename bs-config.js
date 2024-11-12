@@ -1,5 +1,5 @@
 module.exports = {
-  proxy: "http://poverkaperm.loc/", // URL вашего локального PHP-сервера
+  proxy: "http://poverkaperm.loc", // URL вашего локального PHP-сервера
   files: [
     "**/*.php",   // Отслеживание изменений в PHP-файлах
     "**/*.js",    // Отслеживание изменений в JS-файлах

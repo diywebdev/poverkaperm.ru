@@ -1,13 +1,5 @@
-import Swiper, { EffectFade, Autoplay, Pagination, Navigation } from 'swiper';
-import 'swiper/css';
-import 'swiper/css/autoplay';
-import 'swiper/css/effect-fade';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation'
-
-
 const banner = new Swiper('.banner-slider', {
-	modules: [ Autoplay, EffectFade ],
+	// modules: [ Autoplay, EffectFade ],
 	loop: true,
 	autoplay: {
 		delay: 5000
@@ -19,7 +11,7 @@ const banner = new Swiper('.banner-slider', {
 })
 
 const accr = new Swiper('.accr-slider', {
-	modules: [Autoplay, Navigation],
+	// modules: [Autoplay, Navigation],
 	// loop: true,
 	// autoplay: {
 	// 	delay: 5000

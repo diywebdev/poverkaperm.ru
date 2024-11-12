@@ -99,3 +99,23 @@ input[type="checkbox"]:checked ~ div>.fake-checkbox{
 		}
 	}
 }
+
+.bottom-menu {
+	li{
+		@apply sm:text-right sm:mb-5;
+	}
+	a{
+		@apply uppercase font-normal;
+	}
+}
+
+footer {
+	a{
+		&:visited {
+			color: inherit;
+	  	}
+		&:hover, &:focus, &:active {
+			color: white;
+		}
+	}
+}

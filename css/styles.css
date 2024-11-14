@@ -744,6 +744,11 @@ main{
 }
 
 
+.static{
+  position: static;
+}
+
+
 .fixed{
   position: fixed;
 }
@@ -912,6 +917,11 @@ main{
 
 .inline-block{
   display: inline-block;
+}
+
+
+.inline{
+  display: inline;
 }
 
 
@@ -1242,15 +1252,15 @@ main{
 }
 
 
-.gap-y-4{
-  row-gap: 1rem;
-}
-
-
 .gap-x-3{
   -webkit-column-gap: 0.75rem;
      -moz-column-gap: 0.75rem;
           column-gap: 0.75rem;
+}
+
+
+.gap-y-4{
+  row-gap: 1rem;
 }
 
 
@@ -1651,6 +1661,11 @@ main{
 .ease-out{
   -webkit-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+
+.\[hostname\:port\]{
+  hostname: port;
 }
 
 

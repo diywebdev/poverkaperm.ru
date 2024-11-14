@@ -96,31 +96,28 @@ $$('form').forEach(form => {
 		for (const pair of formData) {
 			params.append(pair[0], pair[1]);
 		}
-		await fetch('https://diywebdev.ru/metrology/', {
+		await fetch(contactFormData.ajaxUrl, {
 			method: 'POST',
-			mode: 'cors',
-			cache: 'no-cache',
-			credentials: 'same-origin',
-			headers: {
-				'Content-Type': 'application/x-www-form-urlencoded',
-			},
 			body: params,
 		})
 		.then(res => res.json())
 		.then(data => {
 			stateBtn(btn, 'Отправить');
+			// if(window.location.hostname == 'localhost'){
+				console.log(data);
+			// }
 			if (data.answer == 'required') {
 				showErrorMes(form, data.field, data.message);
 				return;
 			}else if (data.answer == 'error') {
-				showMessageModal(messageModal, errorText+'<br>'+data.error);
+				showMessageModal(messageModal, errorText+'<br>'+data.message);
 			}else{
 				showMessageModal(messageModal, successText);
 			}
-			// console.log(data);
 			form.reset();
 		})
 		.catch(error => {
+			console.log(error);
 			stateBtn(btn, 'Отправить');
 			showMessageModal(messageModal, errorText+'<br>'+error);
 			console.warn("Ошибка отправки данных формы: " + error);

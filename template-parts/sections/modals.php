@@ -11,6 +11,8 @@
 		<form class="flex flex-col gap-4 sm:gap-5">
 			<input type="hidden" name="form" value="">
 			<input type="hidden" name="type" value="odn">
+			<input type="hidden" name="action" value="send_contact_form">
+  			<?php wp_nonce_field('send_contact_form_nonce', 'contact_form_nonce_field'); ?>
 			<input type="text" name="address" class="border border-gray-900/50 transition-all focus:border-opacity-90 focus:border-gray-900 px-4 py-2 mb-1.5 sm:text-lg outline-none w-full" placeholder="Адрес">
 			<div>
 				<input type="tel" name="phone" class="border border-gray-900/50 transition-all focus:border-opacity-90 focus:border-gray-900 px-4 py-2 mb-1.5 sm:text-lg outline-none w-full" placeholder="+7 999 999-99-99 *">

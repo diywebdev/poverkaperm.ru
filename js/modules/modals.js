@@ -29,28 +29,27 @@ document.querySelectorAll(".popup-link").forEach(link => link.onclick = e => {
 		targetModal.querySelector('h2').innerText = 'Онлайн заявка';
 	}
 	if(link.dataset.more){
-		const id = link.dataset.more;
+		const info = JSON.parse(link.dataset.more);		
 		let html;
-		fetch('data.json')
-		.then(async (response) => {
-			const data = await response.json()
-			if(!data.length){
-				console.log('Ошибка FETCH!!!')
-				return;
-			}
-			data.find(h => {
-				if(h.id == id){
-					html = h.html
+		if(info.length > 0){
+			html = '<ul class="space-y-4">';
+			info.map(el => {
+				if(el.price){
+					html += `<li class="list-disc flex justify-between font-normal gap-x-3">${el.name}: <b class="font-medium whitespace-nowrap">${el.price}</b></li>`;
+				}else{
+					html += `<p class="text-[14px]">${el.name}</p>`;
 				}
 			})
-			if(!html) return;
-			targetModal.querySelector('.more-info-content').innerHTML = html;
-			targetModal.querySelector('.popup-link').setAttribute('data-title', title);
-			targetModal.querySelector('.popup-link').setAttribute('data-form', formName);
-			if(typeName){
-				targetModal.querySelector('.popup-link').setAttribute('data-type', typeName);
-			}
-		})
+			html += '</ul>';
+
+		}
+		if(!html) return;
+		targetModal.querySelector('.more-info-content').innerHTML = html;
+		targetModal.querySelector('.popup-link').setAttribute('data-title', title);
+		targetModal.querySelector('.popup-link').setAttribute('data-form', formName);
+		if(typeName){
+			targetModal.querySelector('.popup-link').setAttribute('data-type', typeName);
+		}
 	}
 	targetModal.classList.remove('hidden');
 	document.body.classList.add('overflow-hidden');

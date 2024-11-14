@@ -14,6 +14,7 @@ function wp_starter_scripts()
   wp_enqueue_script('purecounter-scripts', get_template_directory_uri() . '/assets/libs/purecounter.js', array(), null, true);
   wp_enqueue_script('sliders-scripts', get_template_directory_uri() . '/js/modules/sliders.js', array(), null, true);
   wp_enqueue_script('modals-scripts', get_template_directory_uri() . '/js/modules/modals.js', array(), null, true);
+  wp_enqueue_script('form-scripts', get_template_directory_uri() . '/js/modules/form.js?' . time(), array(), null, true); // Подключаем свои скрипты
   wp_enqueue_script('my-scripts', get_template_directory_uri() . '/js/index.js?' . time(), array(), null, true); // Подключаем свои скрипты
 
   //wp_enqueue_script('contact-form', get_template_directory_uri() . '/js/contact-form.js', array()); // Подключаем обработчик формы

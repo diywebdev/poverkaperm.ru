@@ -1,27 +1,28 @@
+<?php get_template_part('template-parts/sections/contacts'); ?>
+
 <footer class="bg-gray-logo text-white/70 pt-20 pb-10">
 		<div class="container">
 			<div class="sm:flex sm:justify-between">
 
 				<div class="logo">
-					<img src="<?= get_template_directory_uri(); ?>/assets/img/logo_cm_white.png" class="max-w-[150px] xl:max-w-[220px]" style="opacity:0.5;" alt="ALT">
+					<a href="<?= home_url(); ?>">
+						<img src="<?= get_template_directory_uri(); ?>/assets/img/logo_cm_white.png" class="max-w-[150px] xl:max-w-[220px]" style="opacity:0.5;" alt="ALT">
+					</a>
 					<p class="pt-10 text-left"><?= get_bloginfo('description'); ?></p>
 					<div class="py-10">
 						<a href="#callback-modal" class="btn btn-accent popup-link text-center" data-form="Онлайн заявка. Кнопка в футере">Оставить заявку</a>
 					</div>
 				</div>
 
-				<nav class="bottom-menu">
-					
+				<?php if(SERVICES): ?>
+				<nav class="bottom-menu">					
 					<ul>
-						<li><a href="https://poverkaperm.ru/schetchiki_hvs_gvs.html" class="">Поверка счётчиков ХВС и ГВС</a></li>
-						<li><a href="https://poverkaperm.ru/obschedomovye_schetchiki_hvs_gvs.html" class="">Поверка общедомовых счётчиков воды</a></li>
-						<li><a href="https://poverkaperm.ru/kvartirniye_teploschetchiki.html" class="">Поверка квартирных теплосчётчиков</a></li>
-						<li><a href="https://poverkaperm.ru/obshedomovie_pribory_ucheta_otopleniya.html" class="">Поверка общедомовых приборов учета отопления</a></li>
-						<li><a href="https://poverkaperm.ru/zamena_schetchiki_hvs_gvs.html" class="">Замена / установка счётчиков ХВС и ГВС</a></li>
-						<li><a href="https://poverkaperm.ru/zamena_obschedomovye_schetchiki_hvs_gvs.html" class="">Замена общедомовых счётчиков ХВС и ГВС</a></li>
-					</ul>
-					
+					<?php foreach(SERVICES as $idx => $service): setup_postdata( $service ); ?>
+						<li><a href="<?= get_permalink($service->ID); ?>" class=""><?= get_the_title($service->ID); ?></a></li>
+					<?php endforeach; wp_reset_postdata(); ?>
+					</ul>					
 				</nav>
+				<?php endif; ?>
 
 
 			</div>

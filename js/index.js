@@ -7,9 +7,9 @@ AOS.init({
 });
 
 console.log(
-	'%cРазработка сайта: %c@diywebdev', 
-	'color: white; font-size: 13px; font-weight: 400;',
-	'color: tomato; font-size: 13px; font-weight: 500;',
+	'%cРазработка сайта: %cTelegram - @diywebdev', 
+	'color: white; font-size: 14px; font-weight: 400;',
+	'color: tomato; font-size: 14px; font-weight: 700;',
 );
 const lightbox = GLightbox();
 
@@ -80,3 +80,12 @@ new PureCounter({
 	currency: false,
 	separator: false,
 });
+
+const faqBlocks = document.querySelectorAll('.faq');
+if(faqBlocks && faqBlocks.length){
+	Array.from(faqBlocks).map(block => {
+		block.querySelectorAll('details').forEach((D,_,A)=>{
+			D.ontoggle =_=>{ if(D.open) A.forEach(d =>{ if(d!=D) d.open=false })}
+		})
+	})
+}

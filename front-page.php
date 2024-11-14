@@ -10,7 +10,6 @@ get_header(); ?>
 	get_template_part('template-parts/sections/work-steps');
 	get_template_part('template-parts/sections/accreditation');
 	get_template_part('template-parts/sections/faq');
-	get_template_part('template-parts/sections/contacts');
 ?>
 </main>
 

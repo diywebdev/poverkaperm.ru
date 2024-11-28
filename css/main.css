@@ -7,3 +7,13 @@
 	src: url("../assets/fonts/fa-solid-900.woff2") format("woff2"), 
 	url("../assets/fonts/fa-solid-900.ttf") format("truetype");
 }
+
+.cities li {
+	list-style-type: square;
+	margin-left: 40px;
+	padding: 10px 0;
+}
+
+.cities li::marker {
+	color: #e80017;
+}

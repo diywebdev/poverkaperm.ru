@@ -124,8 +124,8 @@ function handle_contact_form_submission()
 
 
   $mail->isSMTP();
-  // $mail->Host = 'mail.hosting.reg.ru';
-  $mail->Host = get_field('smtp_host', 'option');
+  $mail->Host = 'mail.hosting.reg.ru';
+  // $mail->Host = get_field('smtp_host', 'option');
   $mail->SMTPAuth = true;
   $mail->Username = $email_from;
   $mail->Password = 'yC7hS2yI4xeF7xU6';

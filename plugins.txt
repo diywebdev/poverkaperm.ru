@@ -2,3 +2,4 @@ cyr2lat
 all-in-one-wp-migration
 wordpress-seo
 acf
+eps-301-redirects

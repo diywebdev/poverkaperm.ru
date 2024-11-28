@@ -37,15 +37,15 @@ function handle_contact_form_submission()
   $now = date("Y-m-d H:i:s");
   $subject = 'Заявка с сайта';
 
-  $admin_email = 'diywebdev@yandex.ru';
-  // $admin_email = 'odn@geosr.ru';
+  // $admin_email = 'diywebdev@yandex.ru';
+  $admin_email = 'odn@geosr.ru';
   $odn = true;
 
   if(isset($_POST['type']) && !empty($_POST['type'])){
     if($_POST['type'] == 'poverka'){
-      // $admin_email = 'Poverka@geosr.ru';
+      $admin_email = 'Poverka@geosr.ru';
       $odn = false;
-      $admin_email = 'newstreetpunk@yandex.ru';
+      // $admin_email = 'newstreetpunk@yandex.ru';
     }
   }
 
@@ -133,9 +133,9 @@ function handle_contact_form_submission()
   $mail->Port = 465;
   $mail->setFrom($email_from, $name_from);
   $mail->addAddress($admin_email);
-  // $mail->addBCC('diywebdev@yandex.ru');
+  $mail->addBCC('diywebdev@yandex.ru');
   if($odn){
-    //$mail->addBCC('sar4486@yandex.ru');
+    $mail->addBCC('sar4486@yandex.ru');
     // $mail->addBCC('newstreetpunk@yandex.ru');
   }
   $mail->isHTML(true);

@@ -1,15 +1,15 @@
 <section class="no-results not-found">
-  <h1 class="page-title">Nothing Found</h1>
+  <h1 class="page-title">Ничего не найдено</h1>
   <div class="page-content">
     <?php
     if (is_search()) :
     ?>
-      <p>Sorry, but nothing matched your search terms. Please try again with some different keywords.</p>
+      <p>Извините, но ничего не соответствует вашим поисковым запросам. Попробуйте еще раз с другими ключевыми словами.</p>
     <?php
       get_search_form();
     else :
     ?>
-      <p>It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.</p>
+      <p>Кажется, мы не можем найти то, что вы ищете. Возможно, поиск поможет.</p>
     <?php
       get_search_form();
 

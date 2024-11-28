@@ -1,7 +1,7 @@
 {
     "key": "ui_options_page_673611720326c",
     "title": "SMTP Settings",
-    "active": true,
+    "active": false,
     "menu_order": 0,
     "page_title": "SMTP Settings",
     "menu_slug": "smtp-settings",
@@ -18,5 +18,5 @@
     "data_storage": "options",
     "post_id": "",
     "autoload": 0,
-    "modified": 1731598341
+    "modified": 1732788553
 }

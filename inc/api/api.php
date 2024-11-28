@@ -7,6 +7,6 @@ function add_cors_http_header()
 }
 add_action('init', 'add_cors_http_header');
 
-require 'PageController.php';
+// require 'PageController.php';
 require 'forms/index.php';
 
